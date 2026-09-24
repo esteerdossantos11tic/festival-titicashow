@@ -1,0 +1,385 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #080808;
+    color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    width: 100%;
+    padding: 22px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #080808;
+    border-bottom: 1px solid #252525;
+}
+
+.logo,
+.footer-logo {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #ff2aa8;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.nav a,
+.footer-nav a {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav a:hover,
+.footer-nav a:hover {
+    color: #39d9ff;
+}
+
+.nav-button,
+.button {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 2px solid #ff2aa8;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.button:hover {
+    background-color: #ff2aa8;
+    color: #ffffff;
+}
+
+.hero {
+    min-height: 90vh;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 80% 20%, #702cff 0%, transparent 28%),
+        radial-gradient(circle at 10% 80%, #ff2aa8 0%, transparent 25%),
+        #080808;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-small {
+    color: #39d9ff;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(6rem, 15vw, 13rem);
+    line-height: 0.75;
+    letter-spacing: 3px;
+    text-shadow:
+        7px 7px 0 #ff2aa8,
+        14px 14px 0 #702cff;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-top: 45px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.hero-date {
+    margin-top: 25px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.3rem;
+    color: #ff2aa8;
+    letter-spacing: 3px;
+}
+
+.hero-location {
+    margin-top: 8px;
+    color: #bdbdbd;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.button-outline {
+    border-color: #39d9ff;
+}
+
+.button-outline:hover {
+    background-color: #39d9ff;
+    color: #080808;
+}
+
+.highlights {
+    padding: 110px 7%;
+    background-color: #0d0d0d;
+}
+
+.section-number {
+    color: #39d9ff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-header h2,
+.lineup-preview h2,
+.tickets-preview h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(4rem, 8vw, 7rem);
+    line-height: 0.85;
+}
+
+.section-header span,
+.lineup-preview span {
+    color: #ff2aa8;
+}
+
+.featured-artists {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.artist-card {
+    min-height: 450px;
+    position: relative;
+    overflow: hidden;
+    background-color: #151515;
+    border: 1px solid #292929;
+    transition: 0.3s;
+}
+
+.artist-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff2aa8;
+}
+
+.artist-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.artist-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.65;
+}
+
+.artist-info {
+    width: 100%;
+    padding: 25px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(transparent, #000000);
+}
+
+.artist-info p {
+    color: #39d9ff;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.artist-info h3 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4rem;
+    line-height: 0.9;
+}
+
+.artist-info span {
+    color: #cccccc;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+}
+
+.lineup-preview {
+    padding: 110px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    background-color: #702cff;
+}
+
+.arrow-link {
+    padding: 15px 0;
+    border-bottom: 2px solid #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.quick-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid #292929;
+    border-bottom: 1px solid #292929;
+}
+
+.info-box {
+    padding: 45px 30px;
+    border-right: 1px solid #292929;
+}
+
+.info-box:last-child {
+    border-right: none;
+}
+
+.info-box span {
+    display: block;
+    color: #ff2aa8;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.info-box strong {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+.tickets-preview {
+    padding: 120px 7%;
+    text-align: center;
+    background:
+        radial-gradient(circle at center, #702cff 0%, transparent 45%),
+        #080808;
+}
+
+.tickets-preview > p {
+    color: #39d9ff;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.tickets-preview h2 {
+    margin-bottom: 40px;
+}
+
+.footer {
+    padding: 35px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    background-color: #050505;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer p {
+    color: #777777;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+
+    .header {
+        flex-direction: column;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .featured-artists {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-box:nth-child(2) {
+        border-right: none;
+    }
+
+    .lineup-preview {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 80px 6%;
+    }
+
+    .hero h1 {
+        font-size: 5rem;
+    }
+
+    .nav {
+        gap: 12px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .quick-info {
+        grid-template-columns: 1fr;
+    }
+
+    .info-box {
+        border-right: none;
+        border-bottom: 1px solid #292929;
+    }
+
+    .info-box:last-child {
+        border-bottom: none;
+    }
+}
+
